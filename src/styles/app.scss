@@ -1,7 +1,10 @@
-body{
-    margin: 100px;
-    background: #ccc
-}
+
+@function rem($px) {
+    @return $px / 16px+0rem;
+  }
+
 @import 'common/menu';
 @import 'common/technologies';
 @import 'common/slider';
+@import 'layout/adjustment';
+@import 'pages/about';
