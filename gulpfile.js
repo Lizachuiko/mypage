@@ -4,7 +4,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-
+const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 
 const browserSync = require('browser-sync').create();
@@ -12,6 +12,7 @@ const browserSync = require('browser-sync').create();
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+// var spritesmith = require('gulp.spritesmith');
 
 const paths = {
     root: './build',
@@ -48,7 +49,20 @@ function styles() {
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
+        .pipe(autoprefixer({
+            browsers: ['> 5%'],
+            cascade: false
+        }))
 }
+
+// gulp.task('sprite', function () {
+//     var spriteData = gulp.src('images/*.png').pipe(spritesmith({
+//       imgName: 'sprite.png',
+//       cssName: 'sprite.css'
+//     }));
+//     return spriteData.pipe(gulp.dest('path/to/output/'));
+//   });
+
 
 // очистка
 function clean() {
