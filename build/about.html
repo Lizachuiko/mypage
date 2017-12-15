@@ -10,6 +10,7 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="/assets/styles/app.min.css">
     <script src="/assets/scripts/bundle.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABlCQL4losoj-uF4TOyPIQiT1XBcz4dUQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -23,9 +24,9 @@
         </div><a class="hamburger-link hero__menu" href="">
           <div class="hamburger"></div></a>
         <div class="hero__title">
-          <div class="section-title"><img class="section-title__pic" src="" alt=""></div>
+          <div class="section-title"><img class="section-title__pic" src="../../../assets/images/header-bg.png" alt=""><img class="section-title__effect" src="../../../assets/images/portfolio_header.png" alt=""></div>
           <div class="hero__user user">
-            <div class="user__pic"><img class="user__pic-img" src="" alt=""></div>
+            <div class="user__pic"><img class="user__pic-img" src="../../../assets/images/avatarme.png" alt=""></div>
             <div class="user__info">
               <div class="user__name">Елизавета Чуйко</div>
               <div class="user__data">Личный сайт разработчика</div>
@@ -108,7 +109,7 @@
         </div>
       </section>
       <section class="section map">
-        <div class="google-map"></div>
+        <div class="google-map" id="map"></div>
         <div class="map__data">
           <div class="contacts">
             <div class="contacts__title">

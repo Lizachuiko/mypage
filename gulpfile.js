@@ -28,6 +28,10 @@ const paths = {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
     },
+    fonts: {
+        src: 'src/fonts/*.*',
+        dest: 'build/assets/fonts/'
+    },
     scripts: {
         src: 'src/scripts/**/*.js',
         dest: 'build/assets/scripts/'
@@ -45,7 +49,10 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/app.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({
+            includePaths: require('node-normalize-scss').includePaths,
+            outputStyle: 'compressed'
+          }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
@@ -92,19 +99,28 @@ function server() {
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
-// просто переносим картинки
+// просто переносим картинки and fonts
 function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
+}
+
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
 }
 
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
+
+
+
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts, fonts),
     gulp.parallel(watch, server)
 ));

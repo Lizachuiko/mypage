@@ -4,10 +4,10 @@
     min-height: rem(650px);
     position: relative;
     overflow: auto;
-    background: beige;
+    // background: beige;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 600px 1fr 1fr 185px;
+    grid-template-rows: 600px 860px 780px 185px;
     grid-template-areas: 
       "header"
       "content"
@@ -17,7 +17,7 @@
 
 .hero {
     grid-area: header;
-    background-image: url("../../../assets/images/header-bg.png");
+    // background-image: url("../../../assets/images/header-bg.png");
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 100px 1fr 100px;
@@ -42,8 +42,26 @@
     background: brown;   
 }
 
+.section-title {
+    position: relative;
+}
+
 .section-title__pic {
-    width: 100%;
+    position: absolute;
+    top: -100px;
+    left: -460px;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+.section-title__effect {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: -90;
+    top: 30px;
+    left: -470px;
 }
 
 .hero__socials {
@@ -54,6 +72,7 @@
     grid-area: hamburger;
     position: relative;
     height: rem(22px);
+    width: 25px;
     display: block;
 }
 
@@ -63,6 +82,10 @@
 
 .hero__title {
     grid-area: person-info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .socials_item {
@@ -80,7 +103,7 @@
     font-size: 35px;
     font-family: "robotomedium";
     color: rgb(255, 255, 255);
-    line-height: 1.171;
+    line-height: 41px;
     text-align: center;
 }
   
@@ -88,18 +111,27 @@
     font-size: 16px;
     font-family: "robotoregular";
     color: rgb(255, 255, 255);
-    line-height: 1.5;
+    line-height: 24px;
     text-align: center;
 }
 
+.user__pic {
+    width: 140px;
+    height: 140px;
+    margin-left: 67px;
+}
 
-
+.user__pic-img {
+    // width: 100%;
+    height: 100%;
+    border-radius: 70px;
+}
 
 .hamburger {
-  
+    margin-top: 9px;
     &, &:before, &:after {
         background-color: #fff;
-        width: rem(24px);
+        width: rem(40px);
         height: 5px;
         border-radius: rem(3px);
     }
@@ -117,4 +149,16 @@
     &:after {
         bottom: 0;
     }
+}
+
+.hero__menu {
+    margin: rem(40px) rem(100px);
+}
+
+.arrow-down {
+    background-image: url("../../../assets/images/arrow_down.png");
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
