@@ -3,8 +3,13 @@
     @return $px / 16px+0rem;
   }
 
+@import 'common/media';
+
+
+@import 'common/mixins';
 @import 'common/menu';
 @import 'common/technologies';
 @import 'common/slider';
 @import 'layout/adjustment';
+@import 'layout/fonts';
 @import 'pages/about';
