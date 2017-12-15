@@ -27,21 +27,25 @@ block content
                         .user__data Личный сайт разработчика
             .hero__arrow.arrow-down
         section.section.about
+            svg.triangle.triangle_fill_white(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 110', preserveaspectratio='none')
+                polygon.about__triangle_left(points='0,0 0,111 600.8,111 600.8,100')
+                polygon.about__triangle_right(points='1200,0 1200,111 600,111 600.8,100')
+
             .about__left
-                .about__triangle.about__triangle_left
-                    svg.triangle.triangle_fill_white
+                .about__triangle
+                    
                 .about__left-title
                     .block-title Обо мне
                 .about__left-coctent
                     .user-description
                         .user-description__image
-                            img.user-description__avatar
+                            img.user-description__avatar(src="../../../assets/images/avatarme.png", alt="")
                         .user-description__title
                             .block-subtitle Кто я
                         .user-description__text.text-block
                             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             .about__right
-                .about__triangle.about__triangle_right
+                .about__triangle
                     svg.triangle.triangle_fill_beige
                 .about__right-title.block-subtitle Чем я могу быть вам полезен
                 .about__right-description.text-block

@@ -30,6 +30,11 @@
 .about {
     grid-area: content;
     background: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .map {
@@ -161,4 +166,36 @@
     height: auto;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.triangle {
+    position: absolute;
+    margin-top: -466px;
+}
+
+.about__triangle_right {
+    fill: #f4f5f0;
+}
+
+.about__triangle_left {
+    fill: #ebefe2;
+}
+
+.about__left {
+    background-color: #f4f5f0;
+    width: 50%;
+}
+
+.about__right {
+    background-color: #ebefe2;
+    width: 50%;
+}
+
+.user-description__image {
+    width: 390px;
+    height: 390px;
+}
+
+.user-description__avatar {
+    height: 80%;
 }
