@@ -17,14 +17,22 @@
       <section class="section hero">
         <div class="hero__socials"> 
           <ul class="socials">
-            <li class="socials_item"><a class="socials__link" href="vk"></a></li>
-            <li class="socials_item"><a class="socials__link" href="gh"></a></li>
-            <li class="socials_item"><a class="socials__link" href="in"></a></li>
+            <div class="socials__container">
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#git"></use>
+              </svg>
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#in"></use>
+              </svg>
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#vk"></use>
+              </svg>
+            </div>
           </ul>
         </div><a class="hamburger-link hero__menu" href="">
           <div class="hamburger"></div></a>
         <div class="hero__title">
-          <div class="section-title"><img class="section-title__pic" src="assets/images/header-bg.png" alt=""><img class="section-title__effect" src="assets/images/portfolio_header.png" alt=""></div>
+          <div class="section-title"><img class="section-title__effect" src="assets/images/portfolio_header.png" alt=""></div>
           <div class="hero__user user">
             <div class="user__pic"><img class="user__pic-img" src="assets/images/avatarme.png" alt=""></div>
             <div class="user__info">
@@ -47,7 +55,7 @@
           </div>
           <div class="about__left-coctent">
             <div class="user-description">
-              <div class="user-description__image"><img class="user-description__avatar" src="assets/images/avatarme.png" alt=""></div>
+              <div class="user-description__image"><img class="user-description__avatar" src="assets/images/my_avatar.jpg" alt=""></div>
               <div class="user-description__title">
                 <div class="block-subtitle">Кто я</div>
               </div>
@@ -58,10 +66,8 @@
           </div>
         </div>
         <div class="about__right">
-          <div class="about__triangle">
-            <svg class="triangle triangle_fill_beige"></svg>
-          </div>
-          <div class="about__right-title block-subtitle">Чем я могу быть вам полезен</div>
+          <div class="about__triangle"></div>
+          <div class="about__right-title block-subtitle">Чем я могу <br>быть вам полезен</div>
           <div class="about__right-description text-block">
             <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
           </div>
