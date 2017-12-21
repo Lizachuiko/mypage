@@ -50,25 +50,37 @@ block content
                         .user-description__title
                             .block-subtitle Кто я
                         .user-description__text.text-block
-                            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             .about__right
                 .about__triangle
                     //- svg.triangle.triangle_fill_beige
                 .about__right-title.block-subtitle Чем я могу <br>быть вам полезен
                 .about__right-description.text-block
-                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about__right-content
                     ul.skills-list
-                        each item in ['Frontend', 'Backend', 'Workflow']
-                            li.skills-list__item
-                                .skills-row
-                                    .skills-row__title #{item}
+                        each val, cat in { 'Frontend': ['HTML5', 'CSS3', 'JavaScript & jQuery'], 'Backend': ['PHP', 'Node.js & npm'], 'Workflow': ['Git', 'Gulp', 'Bower'] }
+                            li.skills-list__item 
+                                .skills-row 
+                                    .skills-row__title #{cat}
                                     ul.skills-row__list
-                                        //- cycle for skills
-                                        li.skills-row__item
-                                            .skill
-                                                svg.skill__circle
-                                                .skill__title
+                                        each item in val 
+                                            li.skills__container
+                                                .skills__item #{item}
+                                                svg.circles(viewbox='0 0 110 110')
+                                                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                                                    circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+
+                        //- each item in ['Frontend', 'Backend', 'Workflow']
+                        //-     li.skills-list__item
+                        //-         .skills-row
+                        //-             .skills-row__title #{item}
+                        //-             ul.skills-row__list
+                        //-                 each skill in ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                        //-                 li.skills-row__item
+                        //-                     .skill
+                        //-                         svg.skill__circle
+                        //-                         .skill__title
         section.section.map
             .google-map#map
             .map__data
