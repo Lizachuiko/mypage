@@ -5,12 +5,16 @@ html
     head
         meta(charset="utf-8")
         title #{title}
+        meta(content="" name="author")
         meta(content="" name="description")
         meta(content="" name="keywords")
         meta(content="width=device-width, initial-scale=1" name="viewport")
         meta(content="ie=edge" http-equiv="x-ua-compatible")
         link(rel='stylesheet' href='/assets/styles/app.min.css')
         script(src='/assets/scripts/bundle.js' defer)
+        script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyABlCQL4losoj-uF4TOyPIQiT1XBcz4dUQ&callback=initMap' async defer)
+        
+
     body
         block content
         include common/menu.pug

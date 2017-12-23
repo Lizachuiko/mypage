@@ -1,7 +1,19 @@
-body{
-    margin: 100px;
-    background: #ccc
-}
+
+@function rem($px) {
+    @return $px / 16px+0rem;
+  }
+
+@import "normalize";
+
+
+@import 'common/media';
+
+
+@import 'common/mixins';
 @import 'common/menu';
 @import 'common/technologies';
 @import 'common/slider';
+@import 'layout/adjustment';
+@import 'layout/map';
+@import 'layout/fonts';
+@import 'pages/about';

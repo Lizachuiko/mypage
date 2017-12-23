@@ -4,7 +4,7 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-
+const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 
 const browserSync = require('browser-sync').create();
@@ -12,6 +12,7 @@ const browserSync = require('browser-sync').create();
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+// var spritesmith = require('gulp.spritesmith');
 
 const paths = {
     root: './build',
@@ -26,6 +27,10 @@ const paths = {
     images: {
         src: 'src/images/**/*.*',
         dest: 'build/assets/images/'
+    },
+    fonts: {
+        src: 'src/fonts/*.*',
+        dest: 'build/assets/fonts/'
     },
     scripts: {
         src: 'src/scripts/**/*.js',
@@ -44,11 +49,27 @@ function templates() {
 function styles() {
     return gulp.src('./src/styles/app.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({
+            includePaths: require('node-normalize-scss').includePaths,
+            outputStyle: 'compressed'
+          }))
         .pipe(sourcemaps.write())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
+        .pipe(autoprefixer({
+            browsers: ['> 5%'],
+            cascade: false
+        }))
 }
+
+// gulp.task('sprite', function () {
+//     var spriteData = gulp.src('images/*.png').pipe(spritesmith({
+//       imgName: 'sprite.png',
+//       cssName: 'sprite.css'
+//     }));
+//     return spriteData.pipe(gulp.dest('path/to/output/'));
+//   });
+
 
 // очистка
 function clean() {
@@ -78,19 +99,28 @@ function server() {
     browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 }
 
-// просто переносим картинки
+// просто переносим картинки and fonts
 function images() {
     return gulp.src(paths.images.src)
         .pipe(gulp.dest(paths.images.dest));
+}
+
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
 }
 
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
+exports.fonts = fonts;
+
+
+
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(styles, templates, images, scripts),
+    gulp.parallel(styles, templates, images, scripts, fonts),
     gulp.parallel(watch, server)
 ));
