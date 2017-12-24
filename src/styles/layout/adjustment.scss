@@ -6,7 +6,7 @@ body {
     text-align: center;
     color: #566358;
   
-    @include tablets {
+    @include ipad {
       font-size: 15px;
   
     }
