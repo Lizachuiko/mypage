@@ -16,6 +16,10 @@
         grid-template-rows: 500px 1680px 900px;
         
     }
+    @include phones {
+        grid-template-rows: 560px 1860px 1140px;
+        
+    }
 }
 
 .hero {
@@ -28,6 +32,14 @@
       "socials socials socials . . . . . . . . hamburger"
       ". . . . person-info person-info person-info person-info . . . ."
       ". . . . . arrow arrow . . . . .";
+    @include phones {
+        grid-template-areas: 
+        "socials socials  socials . . . . . hamburger hamburger"
+        ".  person-info person-info person-info person-info person-info person-info person-info person-info ."
+        ". . . . arrow arrow . . . .";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 60px 1fr 100px;
+    }
 }
 
 .about {
