@@ -14,20 +14,36 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABlCQL4losoj-uF4TOyPIQiT1XBcz4dUQ&amp;callback=initMap" async defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="welcome__container">
+      <button>Авторизироваться</button>
+      <div class="welcome__maincontent">
+        <div class="user__info">
+          <div class="user__name">Елизавета Чуйко</div>
+          <div class="user__data">Личный сайт разработчика</div>
+        </div>
+        <div class="welcome__socials">
+          <ul class="socials">
+            <div class="socials__container">
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#git"></use>
+              </svg>
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#in"></use>
+              </svg>
+              <svg class="icon" width="50" height="50">
+                <use xlink:href="assets/images/sprite.svg#vk"></use>
+              </svg>
+            </div>
+          </ul>
+        </div>
+        <h2>Меню</h2>
+        <ul class="menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">Обо мне</a></li>
+          <li><a href="my-works.html">Мои работы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

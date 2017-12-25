@@ -4,11 +4,27 @@ block variables
     - var title = 'Добро пожаловать'
 
 block content
-    h1 Главная
-    form
-        label(for="email") email
-        input(name="email" id="email")
-        label(for="password") password
-        input(name="password" id="password")
-        button Войти
-    include ../common/menu.pug
+    //- h1 Главная
+    //- form
+    //-     label(for="email") email
+    //-     input(name="email" id="email")
+    //-     label(for="password") password
+    //-     input(name="password" id="password")
+    //-     button Войти
+    .welcome__container
+        button Авторизироваться
+        .welcome__maincontent
+            .user__info
+                .user__name Елизавета Чуйко
+                .user__data Личный сайт разработчика
+            .welcome__socials
+                ul.socials
+                    .socials__container
+                        svg.icon(width='50', height='50')
+                            use(xlink:href='assets/images/sprite.svg#git')
+                        svg.icon(width='50', height='50')
+                            use(xlink:href='assets/images/sprite.svg#in')
+                        svg.icon(width='50', height='50')
+                            use(xlink:href='assets/images/sprite.svg#vk')
+
+            include ../common/menu.pug
