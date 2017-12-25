@@ -5,8 +5,10 @@ body {
     line-height: 24px;
     text-align: center;
     color: #566358;
+      height: 100%;
+    
   
-    @include tablets {
+    @include ipad {
       font-size: 15px;
   
     }
@@ -15,11 +17,22 @@ body {
     }
   }
 
+  
+body {
+  font-size: rem(16px);
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+  color: #566358;
+}
+
 ul {
   padding: 0;
   margin: 0;
-
-  li {
-    list-style: none;
-  }
 }
+
+li {
+    list-style: none;
+    // display: inline-block;
+  }
