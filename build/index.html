@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="welcome__container">
-      <button class="log-in welcome__btn">Авторизироваться</button>
+      <button class="log-in welcome__btn" type="submit">Авторизироваться</button>
       <div class="welcome__box">
         <div class="welcome__maincontent">
           <div class="user">
@@ -50,6 +50,30 @@
         </div>
       </div>
       <div class="welcome__copyright">© Владимир Астахов | создано с любовью в LoftSchool | 2016</div>
+      <div class="login">
+        <div class="login__container">
+          <div class="login__title block-subtitle block-subtitle_white">Авторизироваться</div>
+          <div class="login__form">
+            <form class="login__form-box">
+              <label for="login"></label>
+              <input class="login__form" name="login" id="login" type="password" placeholder="login">
+              <label for="password"></label>
+              <input class="password__form" name="password" id="password" type="password" placeholder="password">
+              <label for="checkbox">Я человек</label>
+              <input class="checkbox__form" name="checkbox" id="checkbox" type="checkbox">
+              <label for="radio">Вы точно не робот</label>
+              <input class="radio__form" name="radio" id="radio" type="radio">
+            </form>
+          </div>
+        </div>
+        <div class="login__menu_container">
+          <ul class="menu login__menu">
+            <li class="login__item"><a class="login__link" href="about.html">Обо мне</a></li>
+            <li class="login__item"><a class="login__link" href="my-works.html">Мои работы</a></li>
+            <li class="login__item"><a class="login__link" href="blog.html">Блог        </a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>

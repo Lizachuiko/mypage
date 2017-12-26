@@ -340,27 +340,9 @@ p {
     line-height: 1.171;
     text-align: center;
     position: relative;
+    margin: 0 auto;
     margin-bottom: 35px;
-    //  background-image: url("../images/line2.png");
-    // background-position: center bottom;
-    // background-size: 89px 3px;
-    // background-repeat: no-repeat;
-    // height: 60px;
-    // &:after {
-    //     content: "";
-    //     display: block;
-    //     // position: absolute;
-    //     width: 89px;
-    //     height: 3px;
-    //     background-image: url("../images/line2.png");
-    //     // background-position: center bottom;
-    //     // background-size: 89px 3px;
-    //     // background-repeat: no-repeat;
-    //     // left: 40%;
-    //     margin: 20px auto;
-
-    //     // bottom: -25px;
-    // }
+    width: fit-content;
     @include ipad {
         font-size: 30px;
     }

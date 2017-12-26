@@ -12,7 +12,7 @@ block content
     //-     input(name="password" id="password")
     //-     button Войти
     .welcome__container
-        button.log-in.welcome__btn Авторизироваться
+        button.log-in.welcome__btn(type='submit') Авторизироваться
         .welcome__box
             .welcome__maincontent
                 .user
@@ -43,3 +43,26 @@ block content
                     li.menu__item
                         a.menu__link(href="blog.html") Блог
         .welcome__copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016
+        .login
+            .login__container
+                .login__title.block-subtitle.block-subtitle_white Авторизироваться
+                .login__form
+                    form.login__form-box
+                        label(for="login")
+                        input.login__form(name="login" id="login" type="password" placeholder="login")
+                        label(for="password")
+                        input.password__form(name="password" id="password" type="password" placeholder="password")
+                        label(for="checkbox") Я человек
+                        input.checkbox__form(name="checkbox" id="checkbox" type="checkbox")
+                        label(for="radio") Вы точно не робот
+                        input.radio__form(name="radio" id="radio" type="radio")
+            .login__menu_container
+                ul.menu.login__menu
+                    li.login__item
+                        a.login__link(href="about.html") Обо мне
+                    li.login__item
+                        a.login__link(href="my-works.html") Мои работы
+                    li.login__item
+                        a.login__link(href="blog.html") Блог        
+                    
+                

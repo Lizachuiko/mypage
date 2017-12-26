@@ -13,19 +13,29 @@
 
 .welcome__box {
     margin: 0 5%;
+    display: none;
 }
 
 .welcome__maincontent {
     border-radius: 5px 5px 0 0;
     background-color: rgba(18, 38, 32, 0.6);
-    padding: 40px 65px;
+    padding: 40px 50px;
     @include phones {
         padding: 40px 50px;
     }
 }
 
+
+
 .welcome__socials {
     opacity: 0.6;
+}
+
+.login__form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
 }
 
 .welcome__btn {

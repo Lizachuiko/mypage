@@ -1,0 +1,46 @@
+.login__container {
+    // margin: 0 5%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container {
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(18, 38, 32, 0.6);
+    padding: 35px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 380px;
+    width: 380px;
+    @include phones {
+        padding: 40px 50px;
+    }
+}
+
+.block-subtitle_white {
+    color: white;
+    border-bottom: 3px solid white;
+    margin-bottom: 10px;
+}
+
+.login__form,
+.password__form {
+    height: 50px;
+    width: 340px;
+    border-radius: 26px;
+    border: none;
+}
+
+.login__form-box {
+    font-size: 16px;
+    font-family: "robotoregular";
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+
