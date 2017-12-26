@@ -7,3 +7,9 @@
     $phones: 480px;
 
     $grey: #566358;
+
+    @mixin cover(){
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }

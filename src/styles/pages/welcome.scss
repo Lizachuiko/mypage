@@ -1,0 +1,76 @@
+.welcome__container {
+    width: 100%;
+    height: 100%;
+    min-height: rem(650px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/header-bg.png");
+    @include cover;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome__box {
+    margin: 0 5%;
+}
+
+.welcome__maincontent {
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(18, 38, 32, 0.6);
+    padding: 40px 65px;
+    @include phones {
+        padding: 40px 50px;
+    }
+}
+
+.welcome__socials {
+    opacity: 0.6;
+}
+
+.welcome__btn {
+    position: absolute;
+    width: 180px;
+    height: 45px;
+    border: 1px solid white;
+    border-radius: 25px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-family: "robotomedium";
+    @include phones {
+        right: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.welcome__menu {
+    display: flex;
+    justify-content: space-between;
+}
+.menu__item {
+    background-color: #649255;
+    width: 33.3%;
+    padding: 10px 0;
+    &:hover {
+        background-color: #477d38;
+    }
+    &:nth-child(2) {
+        border-left: 1px solid #a0b99e;
+        border-right: 1px solid #a0b99e;
+    }
+}
+
+.welcome__copyright {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    font-family: "robotoregular";
+    color: rgb(255, 255, 255);
+    text-align: center;
+    @include phones {
+        font-family: "robotolight";
+    }
+}

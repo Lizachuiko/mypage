@@ -1,4 +1,4 @@
-.wrapper {
+.about__wrapper {
     width: 100%;
     height: 100%;
     min-height: rem(650px);
@@ -24,6 +24,7 @@
     position: relative;
     grid-area: header;
     background-image: url("../images/header-bg.png");
+    @include cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 100px 1fr 100px;
@@ -180,6 +181,10 @@ p {
     color: rgb(255, 255, 255);
     line-height: 41px;
     text-align: center;
+    @include phones {
+        font-size: 21px;
+        line-height: 28px;
+    }
 }
   
 .user__data {
@@ -188,8 +193,12 @@ p {
     color: rgb(255, 255, 255);
     line-height: 24px;
     text-align: center;
+    @include phones {
+        font-size: 14px;
+    }
 }
 
+  
 .user__pic {
     width: 140px;
     height: 140px;
@@ -199,7 +208,7 @@ p {
 .user__pic-img {
     // width: 100%;
     height: 100%;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 
 .hamburger {

@@ -12,19 +12,34 @@ block content
     //-     input(name="password" id="password")
     //-     button Войти
     .welcome__container
-        button Авторизироваться
-        .welcome__maincontent
-            .user__info
-                .user__name Елизавета Чуйко
-                .user__data Личный сайт разработчика
-            .welcome__socials
-                ul.socials
-                    .socials__container
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#git')
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#in')
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#vk')
+        button.log-in.welcome__btn Авторизироваться
+        .welcome__box
+            .welcome__maincontent
+                .user
+                    .user__pic
+                            img.user__pic-img(src="assets/images/avatarme.png", alt="")
+                    .user__info
+                        .user__name.asd Елизавета Чуйко
+                        .user__data Личный сайт разработчика
+                .welcome__socials
+                    ul.socials
+                        .socials__container
+                            svg.icon(width='50', height='50')
+                                use(xlink:href='assets/images/sprite.svg#git')
+                            svg.icon(width='50', height='50')
+                                use(xlink:href='assets/images/sprite.svg#in')
+                            svg.icon(width='50', height='50')
+                                use(xlink:href='assets/images/sprite.svg#vk')
 
-            include ../common/menu.pug
+            //- include ../common/menu.pug
+            .welcome__menu_container
+                ul.menu.welcome__menu
+                    //- li.menu__item
+                    //-     a.menu__link(href="index.html") Главная
+                    li.menu__item
+                        a.menu__link(href="about.html") Обо мне
+                    li.menu__item
+                        a.menu__link(href="my-works.html") Мои работы
+                    li.menu__item
+                        a.menu__link(href="blog.html") Блог
+        .welcome__copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016
