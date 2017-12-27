@@ -443,11 +443,10 @@ p {
     position: absolute;
     width: 380px;
     height: 310px;
-    top:50%;
-    left:50%;
+    top:25%;
+    left:25%;
     background-color: white;
     opacity: 0.851;
-    top: 379px;
     padding: 40px 30px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -517,7 +516,7 @@ p {
 
   .footer__col {
      padding: 0 20px;
-    //   flex: 1;
+     width: 33.3%;
     @include ipad {
         width: 50%;
         text-align: left;
