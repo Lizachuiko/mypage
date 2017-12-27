@@ -17,7 +17,7 @@
 
 function initMap() {
     var idMap = document.getElementById('map');
-    var image = '../images/marker.png';
+    var image = 'assets/images/marker.png';
     var style = [
         {
             "featureType": "administrative",

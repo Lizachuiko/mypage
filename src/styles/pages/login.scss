@@ -3,15 +3,17 @@
 }
 
 .login {
-    display: flex;
+    // display: flex;
+    display: none;
     flex-direction: column;
 }
 
 .login__container {
+    
+    display: flex;
     border-radius: 5px 5px 0 0;
     background-color: rgba(18, 38, 32, 0.6);
     padding: 35px 5%;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 380px;
@@ -76,7 +78,8 @@
 }
 
 .form-quest,
-.login__link {
+.login__link,
+.welcome__menu__link {
     font-size: 16px;
     font-family: "robotobold";
     color: rgba(255, 255, 255, 0.8);
