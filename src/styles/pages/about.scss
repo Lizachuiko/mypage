@@ -115,11 +115,12 @@ p {
 
 .section-title__effect {
     position: absolute;
-    width: auto;
-    height: auto;
+    // width: auto;
+    max-width: 100%;
+    // height: auto;
     z-index: 100;
-    top: 30px;
-    left: -470px;
+    top: 25%;
+    // left: -470px;
 }
 
 .hero__socials {
@@ -145,6 +146,7 @@ p {
     align-items: center;
     
 }
+
 .icon {
     fill: white;
     &:hover {
@@ -311,7 +313,6 @@ p {
 
 .block-title {
     display: inline-block;
-    border-bottom: 3px solid $grey;
     font-size: 62.792px;
     font-family: 'sansuswebissimoregular';
     color: rgb(55, 62, 66);
@@ -324,6 +325,14 @@ p {
     background-repeat: no-repeat;
     height: 80px;
     margin-bottom: 30px;
+    border-bottom: 3px solid $grey;
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     border-bottom: 3px solid $grey;
+    //     width: 84px;
+    // }
     @include ipad {
         font-size: 59px;
     }

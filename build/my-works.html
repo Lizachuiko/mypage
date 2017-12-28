@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="works__wrapper">
-      <section class="section hero">
+      <section class="section hero"><img class="section-title__effect" src="assets/images/portfolio_header.png" alt="">
         <div class="hero__socials"> 
           <ul class="socials">
             <div class="socials__container">
@@ -33,7 +33,7 @@
         </div><a class="hamburger-link hero__menu" href="">
           <div class="hamburger"></div></a>
         <div class="hero__title">
-          <div class="section-title"><img class="section-title__effect" src="assets/images/portfolio_header.png" alt=""></div>
+          <div class="section-title"></div>
           <div class="hero__user user">
             <div class="user__pic"><img class="user__pic-img" src="assets/images/avatarme.png" alt=""></div>
             <div class="user__info">
@@ -49,8 +49,23 @@
         </svg>
       </section>
       <section class="section works__slider">
-        <div class="slider__title block-subtitle">Мои работы</div>
-        <div class="slider__content"></div>
+        <div class="slider__title block-title">Мои работы</div>
+        <div class="slider__content slider__container">
+          <div class="slider__info">
+            <div class="slide-info showing">
+              <div class="slide__title block-subtitle">Сайт школы онлайн образования</div>
+              <div class="slide__description">HTML, CSS, JAVASCRIPT</div>
+              <div class="slide__button-show">Посмотреть сайт</div>
+            </div>
+          </div>
+          <div class="slider__display">
+            <div class="slide showing"><img class="slide__img" src="assets/images/work-1.png" alt=""></div>
+          </div>
+          <div class="slider__btns">
+            <button class="controls" id="previous">&lt;</button>
+            <button class="controls" id="next">&gt;</button>
+          </div>
+        </div>
       </section>
       <section class="section works__review"></section>
     </div>

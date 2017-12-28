@@ -29,3 +29,74 @@
     grid-area: review;
 }
 
+.slider__container {
+    display: grid;
+    height: 755px;
+    max-height: 100vh;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: 
+    "info display"
+    "info buttons";
+    @include ipad {
+        grid-template-columns: 100%;
+        grid-template-rows: 530px 270px 210px;
+        grid-template-areas: 
+        "display"
+        "info" 
+        "buttons";
+    }
+    @include phones {
+        grid-template-rows: 260px 220px 90px;
+    }
+}
+
+.slider__info {
+    grid-area: info;
+    background-color: $beige;
+}
+
+.slider__display {
+    grid-area: display;
+    background-color: $ligrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__btns {
+    grid-area: buttons; 
+    background-color: lightseagreen; 
+}
+
+.slide {
+    width: 50%;
+    // background-image: url("../images/work-1.png");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: 50% auto;
+}
+
+.slide__img {
+    display: block;
+    width: 100%;
+}
+
+.slide__description {
+    font-size: 15.791px;
+    font-family: "robotomedium";
+    color: rgb(78, 136, 57);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.slide__button-show {
+    font-size: 16px;
+    font-family: "robotomedium";
+    color: rgb(255, 255, 255);
+    line-height: 2.257;
+    text-align: center;
+    background-color: $green;
+  }
+  
