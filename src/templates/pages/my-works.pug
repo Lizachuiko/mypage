@@ -4,5 +4,10 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    h1 Мои работы
-    include ../common/slider.pug
+    .works__wrapper
+        include ../common/header.pug
+        section.section.works__slider
+            .slider__title.block-title Мои работы
+            include ../common/slider.pug
+
+        section.section.works__review

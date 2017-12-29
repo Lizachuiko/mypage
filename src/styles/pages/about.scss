@@ -1,4 +1,4 @@
-.wrapper {
+.about__wrapper {
     width: 100%;
     height: 100%;
     min-height: rem(650px);
@@ -14,17 +14,17 @@
       "map";
       @include ipad {
         grid-template-rows: 500px 1680px 900px;
-        
     }
     @include phones {
         grid-template-rows: 560px 1860px 1140px;
-        
     }
 }
 
 .hero {
+    position: relative;
     grid-area: header;
     background-image: url("../images/header-bg.png");
+    @include cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 100px 1fr 100px;
@@ -66,7 +66,7 @@
     position: absolute;
     bottom: 0;
     // grid-area: footer;
-    height: 185px;
+    // height: 185px;
    
     color: white;
     font-family: 'robotolight';
@@ -75,7 +75,8 @@
     line-height: 24px;
     display: flex;
     flex-direction: column;
-    
+    z-index: 100;
+
 }
 
 .footer__row-copyright {
@@ -86,14 +87,16 @@
     position: relative;
     // bottom: 0;
     width: 100%;
-
+    @include phones {
+        height: 65px;
+    }
 }
 
 p {
     margin: 0;
     display: inline-block;
     @include ipad {
-        text-align: center;
+        // text-align: center;
     }
 }
 
@@ -112,11 +115,12 @@ p {
 
 .section-title__effect {
     position: absolute;
-    width: auto;
-    height: auto;
+    // width: auto;
+    max-width: 100%;
+    // height: auto;
     z-index: 100;
-    top: 30px;
-    left: -470px;
+    top: 25%;
+    // left: -470px;
 }
 
 .hero__socials {
@@ -142,8 +146,12 @@ p {
     align-items: center;
     
 }
+
 .icon {
     fill: white;
+    &:hover {
+        fill: #65873d;
+    }
 }
 
 .socials__container,
@@ -167,6 +175,7 @@ p {
     flex-direction: column;
     // justify-content: center;
     align-items: center;
+    z-index: 110;
 }
 
 .user__name {
@@ -175,6 +184,10 @@ p {
     color: rgb(255, 255, 255);
     line-height: 41px;
     text-align: center;
+    @include phones {
+        font-size: 21px;
+        line-height: 28px;
+    }
 }
   
 .user__data {
@@ -183,8 +196,12 @@ p {
     color: rgb(255, 255, 255);
     line-height: 24px;
     text-align: center;
+    @include phones {
+        font-size: 14px;
+    }
 }
 
+  
 .user__pic {
     width: 140px;
     height: 140px;
@@ -194,7 +211,7 @@ p {
 .user__pic-img {
     // width: 100%;
     height: 100%;
-    border-radius: 70px;
+    border-radius: 50%;
 }
 
 .hamburger {
@@ -231,9 +248,10 @@ p {
 }
 
 .triangle {
-    top: -65px;
+    // top: -65px;
     position: absolute;
     // margin-top: -65px;
+    bottom: 0;
 }
 
 .about__triangle_right {
@@ -260,6 +278,10 @@ p {
         width: 100%;
         padding: 50px;
     }
+    @include phones {
+        padding: 10px;
+    }
+
 }
 .about__left {
     background-color: #ebefe2;
@@ -290,18 +312,27 @@ p {
 
 
 .block-title {
+    display: inline-block;
     font-size: 62.792px;
-    font-family: 'sansus_webissimoregular';
+    font-family: 'sansuswebissimoregular';
     color: rgb(55, 62, 66);
     text-transform: uppercase;
     line-height: 1.048;
     text-align: center;
-    background-image: url("../images/line.png");
-    background-position: center bottom;
+    background-image: url("../images/about_header.png");
+    background-position: center;
     background-size: 89px 3px;
     background-repeat: no-repeat;
     height: 80px;
     margin-bottom: 30px;
+    border-bottom: 3px solid $grey;
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     border-bottom: 3px solid $grey;
+    //     width: 84px;
+    // }
     @include ipad {
         font-size: 59px;
     }
@@ -309,33 +340,19 @@ p {
   
 
 .block-subtitle {
+    border-bottom: 3px solid $grey;
+    display: inline-block;
+    padding-bottom: 20px;
     font-size: 35px;
-    font-family: "Sansus Webissimo";
+    font-family: "sansuswebissimoregular";
     color: rgb(86, 99, 88);
     text-transform: uppercase;
     line-height: 1.171;
     text-align: center;
     position: relative;
-    //  background-image: url("../images/line2.png");
-    // background-position: center bottom;
-    // background-size: 89px 3px;
-    // background-repeat: no-repeat;
-    // height: 60px;
-    &:after {
-        content: "";
-        display: block;
-        // position: absolute;
-        width: 89px;
-        height: 3px;
-        background-image: url("../images/line2.png");
-        // background-position: center bottom;
-        // background-size: 89px 3px;
-        // background-repeat: no-repeat;
-        // left: 40%;
-        margin: 20px auto;
-
-        // bottom: -25px;
-    }
+    margin: 0 auto;
+    margin-bottom: 35px;
+    width: fit-content;
     @include ipad {
         font-size: 30px;
     }
@@ -343,6 +360,7 @@ p {
 
 .about__right-title,
 .user-description__title {
+    display: inline-block;
     margin-bottom: 60px;
     @include ipad {
         margin-bottom: 20px;
@@ -379,6 +397,9 @@ p {
     line-height: 1.5;
     text-align: left;
     margin-bottom: 20px;
+    @include ipad {
+
+    }
   }
   
   .skills__item {
@@ -391,6 +412,7 @@ p {
     position: absolute;
     top: 50%;
     left: 40%;
+    transform: translateY(-50%) translateX(-50%);
     // transform: translate(-50%, -50%);
   }
 
@@ -408,19 +430,19 @@ p {
   }
   .circle__second {
     stroke: #74a163;
-    stroke-dasharray: .0010 282.6;
+    stroke-dasharray: 70.0010 282.6;
     transition: all 1s;
   }
-  .circles:hover .circle-25 {
-    stroke-dasharray: 70.65 282.6;
- }
+//   .circles:hover .circle-25 {
+//     stroke-dasharray: 70.65 282.6;
+//  }
 
  .skills__container {
     width: 110px;
     height: 110px;
     display: inline-block;
     position: relative;
-    margin-right: 40px;
+    margin-right: 5%;
     &:last-child {
         margin-right: 0px;
     }
@@ -431,18 +453,25 @@ p {
     position: absolute;
     width: 380px;
     height: 310px;
-    top:50%;
-    left:50%;
+    top:25%;
+    left:25%;
     background-color: white;
     opacity: 0.851;
-    top: 379px;
     padding: 40px 30px;
     box-sizing: border-box;
     border-radius: 10px;
+    z-index: 100;
+    @include phones {
+        top: 0;
+        width: 100%;
+        left:0;
+        border-radius: 0px;
+    }
  }
 
  .contacts-row {
      display: flex;
+     margin-bottom: 10px;
  }
 
  * {
@@ -457,7 +486,8 @@ p {
 
   .footer__row {
       display: flex;
-      flex: 1;
+      flex-direction: row;
+    //   flex: 1;
     padding: 20px 0;
     background-color: rgb(55, 62, 66);
     opacity: 0.851;
@@ -467,6 +497,14 @@ p {
         height: 235px;
         flex-wrap: wrap;
         
+    }
+    @include phones {
+        height: 290px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0;       
     }
   }
   .footer__text {
@@ -488,7 +526,15 @@ p {
 
   .footer__col {
      padding: 0 20px;
-      flex: 1;
+     width: 33.3%;
+    @include ipad {
+        width: 50%;
+        text-align: left;
+    }
+    @include phones {
+        text-align: center;
+        width: 100%;
+    }
   }
 
 
@@ -515,3 +561,4 @@ p {
       height: 25px;
       margin-right: 40px;
   }
+

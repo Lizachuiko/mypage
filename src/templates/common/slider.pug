@@ -1,8 +1,16 @@
-.container
-    ul#slides
-        li.slide.showing
-        li.slide
-        li.slide
-    .buttons
+.slider__content.slider__container
+    .slider__info
+        .slide-info.showing
+            .slide__title.block-subtitle Сайт школы онлайн образования
+            .slide__description HTML, CSS, JAVASCRIPT
+            .slide__button-show Посмотреть сайт
+        //- .slide-info
+        //- .slide-info
+    .slider__display
+        .slide.showing
+            img.slide__img(src="assets/images/work-1.png", alt="")
+        //- .slide
+        //- .slide
+    .slider__btns
         button.controls#previous &lt;
         button.controls#next &gt;

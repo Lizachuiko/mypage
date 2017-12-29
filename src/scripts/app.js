@@ -1,7 +1,7 @@
-const slider = require('./common/slider');
-const $ = require('jquery'); // если будет нужен
+// const slider = require('./common/slider');
+// const $ = require('jquery'); // если будет нужен
 
-slider(); // инициализируем слайдер
+// slider(); // инициализируем слайдер
 
 // function initMap() {
 //         var uluru = {lat: -25.363, lng: 131.044};
@@ -17,7 +17,7 @@ slider(); // инициализируем слайдер
 
 function initMap() {
     var idMap = document.getElementById('map');
-    var image = '../images/marker.png';
+    var image = 'assets/images/marker.png';
     var style = [
         {
             "featureType": "administrative",
@@ -123,3 +123,5 @@ function initMap() {
        var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 };
+
+initMap();

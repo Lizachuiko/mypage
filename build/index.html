@@ -9,24 +9,82 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/styles/app.min.css">
-    <script src="assets/scripts/bundle.js" defer></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABlCQL4losoj-uF4TOyPIQiT1XBcz4dUQ&amp;callback=initMap" async defer></script>
+    <script src="assets/scripts/bundle.js" defer></script>
   </head>
   <body>
-    <h1>Главная</h1>
-    <form>
-      <label for="email">email</label>
-      <input name="email" id="email">
-      <label for="password">password</label>
-      <input name="password" id="password">
-      <button>Войти</button>
-    </form>
-    <h2>Меню</h2>
-    <ul class="menu">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="about.html">Обо мне</a></li>
-      <li><a href="my-works.html">Мои работы</a></li>
-      <li><a href="blog.html">Блог</a></li>
-    </ul>
+    <div class="welcome__container">
+      <button class="log-in welcome__btn" type="submit">Авторизироваться</button>
+      <div class="welcome__box">
+        <div class="welcome__maincontent">
+          <div class="user">
+            <div class="user__pic"><img class="user__pic-img" src="assets/images/avatarme.png" alt=""></div>
+            <div class="user__info">
+              <div class="user__name asd">Елизавета Чуйко</div>
+              <div class="user__data">Личный сайт разработчика</div>
+            </div>
+          </div>
+          <div class="welcome__socials">
+            <ul class="socials">
+              <div class="socials__container">
+                <svg class="icon" width="50" height="50">
+                  <use xlink:href="assets/images/sprite.svg#git"></use>
+                </svg>
+                <svg class="icon" width="50" height="50">
+                  <use xlink:href="assets/images/sprite.svg#in"></use>
+                </svg>
+                <svg class="icon" width="50" height="50">
+                  <use xlink:href="assets/images/sprite.svg#vk"></use>
+                </svg>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div class="welcome__menu_container">
+          <ul class="welcome__menu">
+            <li class="welcome__menu__item"><a class="welcome__menu__link" href="about.html">Обо мне</a></li>
+            <li class="welcome__menu__item"><a class="welcome__menu__link" href="my-works.html">Мои работы</a></li>
+            <li class="welcome__menu__item"><a class="welcome__menu__link" href="blog.html">Блог</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="welcome__copyright">© Владимир Астахов | создано с любовью в LoftSchool | 2016</div>
+      <div class="login">
+        <div class="login__container">
+          <div class="login__title block-subtitle block-subtitle_white">Авторизироваться</div>
+          <div class="login__form_container">
+            <form class="login__form-box">
+              <label for="login"></label>
+              <input class="login__form" name="login" id="login" type="password" placeholder="login">
+              <label for="password"></label>
+              <input class="password__form" name="password" id="password" type="password" placeholder="password">
+              <div class="checkbox__container">
+                <input class="checkbox__form" name="checkbox" id="checkbox" type="checkbox">
+                <label for="checkbox">Я человек</label>
+              </div>
+              <div class="form-quest">Вы точно не робот?</div>
+              <div class="radio__container">
+                <div class="yes-box">
+                  <input class="radio__form-yes" name="radio" id="radio-yes" type="radio">
+                  <label for="radio-yes">Да</label>
+                </div>
+                <div class="no-box">
+                  <input class="radio__form-no" name="radio" id="radio-no" type="radio">
+                  <label for="radio-no">Не уверен</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="login__menu_container">
+          <ul class="login__menu">
+            <li class="login__item"><a class="login__link" href="about.html">На главную</a></li>
+            <li class="login__item"><a class="login__link" href="#">Войти</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/bundle.js" defer></script>
   </body>
 </html>

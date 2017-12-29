@@ -4,40 +4,10 @@ block variables
     - var title = 'Обо мне'
 
 block content
-    .wrapper
-        section.section.hero
-            //- отпозиционировать абсолютом or flex
-            .hero__socials 
-                ul.socials
-                    .socials__container
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#git')
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#in')
-                        svg.icon(width='50', height='50')
-                            use(xlink:href='assets/images/sprite.svg#vk')
-                    //- each item in ['vk', 'gh', 'in']
-                    //-     li.socials_item
-                    //-         a(href=`${item}`).socials__link
-            a(href="").hamburger-link.hero__menu
-                .hamburger
-            .hero__title
-                .section-title
-                    //- как сделать это фоном?
-                    //- img.section-title__pic(src="assets/images/header-bg.png", alt="")
-                    img.section-title__effect(src="assets/images/portfolio_header.png", alt="")
-                .hero__user.user
-                    .user__pic
-                        img.user__pic-img(src="assets/images/avatarme.png", alt="")
-                    .user__info
-                        .user__name Елизавета Чуйко
-                        .user__data Личный сайт разработчика
-            .hero__arrow.arrow-down
+    .about__wrapper
+        include ../common/header.pug
         section.section.about
-            svg.triangle.triangle_fill_white(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 1200 110', preserveaspectratio='none')
-                polygon.about__triangle_left(points='0,0 0,111 600.8,111 600.8,100')
-                polygon.about__triangle_right(points='1200,0 1200,111 600,111 600.8,100')
-
+            
             .about__left
                 .about__triangle
                     
@@ -123,10 +93,14 @@ block content
                                         li.menu__item
                                             a(href="").menu__link #{item}
                         .footer__socials
-                            ul.socials.socials_rounded
-                                each item in ['vk', 'gh', 'in']
-                                    li.socials_item
-                                        a(href=`${item}`).socials__link
+                            ul.socials
+                                .socials__container.socials__footer
+                                    svg.icon(width='50', height='50')
+                                        use(xlink:href='assets/images/sprite.svg#git')
+                                    svg.icon(width='50', height='50')
+                                        use(xlink:href='assets/images/sprite.svg#in')
+                                    svg.icon(width='50', height='50')
+                                        use(xlink:href='assets/images/sprite.svg#vk')
                     .footer__col
                         .footer__review 
                             p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. 
