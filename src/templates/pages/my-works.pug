@@ -11,3 +11,26 @@ block content
             include ../common/slider.pug
 
         section.section.works__review
+            .review__title.block-title Что обо мне говорят
+            .review__content.block-review
+                .block-review__first
+                    .block-review__avatar
+                        img.block-review__pic(src="assets/images/review-face.png", alt="")
+                    .block-review__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .block-review__name Ковальчук Дмитрий
+                    .block-review__job — основатель Loftschool
+                .block-review__second
+                    .block-review__avatar
+                        img.block-review__pic(src="assets/images/review-face.png", alt="")
+                    .block-review__content Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .block-review__name Ковальчук Дмитрий
+                    .block-review__job — основатель Loftschool
+            .review__window-link.window-link__box
+                .window-link__title.block-subtitle Связаться со мной
+                input.window-link__name(name="name" id="name" type="text" placeholder="Имя")
+                input.window-link__mail(name="mail" id="mail" type="text" placeholder="Email")        
+                textarea.window-link__message(name="message" id="message" placeholder="Ваше сообщение" rows="3")
+                .window-link__buttons
+                    button.window-link__send Отправить
+                    button.window-link__reset Очистить
+            include ../common/footer.pug

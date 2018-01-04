@@ -3,12 +3,10 @@
     height: 100%;
     min-height: rem(650px);
     position: relative;
-    // overflow: auto;
-    // background: beige;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 600px 860px 965px ;
-    grid-template-areas: 
+    grid-template-areas:
       "header"
       "content"
       "map";
@@ -28,12 +26,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 100px 1fr 100px;
-    grid-template-areas: 
+    grid-template-areas:
       "socials socials socials . . . . . . . . hamburger"
       ". . . . person-info person-info person-info person-info . . . ."
       ". . . . . arrow arrow . . . . .";
     @include phones {
-        grid-template-areas: 
+        grid-template-areas:
         "socials socials  socials . . . . . hamburger hamburger"
         ".  person-info person-info person-info person-info person-info person-info person-info person-info ."
         ". . . . arrow arrow . . . .";
@@ -58,7 +56,7 @@
 
 .map {
     grid-area: map;
-    background: lightgreen;   
+    background: lightgreen;
     position: relative;
 }
 
@@ -67,7 +65,7 @@
     bottom: 0;
     // grid-area: footer;
     // height: 185px;
-   
+
     color: white;
     font-family: 'robotolight';
     font-size: 16px;
@@ -115,12 +113,9 @@ p {
 
 .section-title__effect {
     position: absolute;
-    // width: auto;
     max-width: 100%;
-    // height: auto;
     z-index: 100;
     top: 25%;
-    // left: -470px;
 }
 
 .hero__socials {
@@ -144,7 +139,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .icon {
@@ -173,7 +168,6 @@ p {
 .user {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     z-index: 110;
 }
@@ -189,7 +183,7 @@ p {
         line-height: 28px;
     }
 }
-  
+
 .user__data {
     font-size: 16px;
     font-family: "robotoregular";
@@ -201,15 +195,13 @@ p {
     }
 }
 
-  
+
 .user__pic {
     width: 140px;
     height: 140px;
-    // margin-left: 67px;
 }
 
 .user__pic-img {
-    // width: 100%;
     height: 100%;
     border-radius: 50%;
 }
@@ -222,17 +214,17 @@ p {
         height: 5px;
         border-radius: rem(3px);
     }
-  
+
     &:before, &:after {
         content: "";
         display: block;
         position: absolute;
     }
-  
+
     &:before {
         top: 0;
     }
-  
+
     &:after {
         bottom: -5px;
     }
@@ -248,21 +240,22 @@ p {
 }
 
 .triangle {
-    // top: -65px;
     position: absolute;
-    // margin-top: -65px;
     bottom: 0;
 }
 
 .about__triangle_right {
     fill: #f4f5f0;
     @include ipad {
-        fill: #ebefe2;
+        fill: #f8f9f5;
     }
 }
 
 .about__triangle_left {
     fill: #ebefe2;
+    @include ipad {
+        fill: #f8f9f5;
+    }
 }
 
 .about__right,
@@ -288,19 +281,17 @@ p {
 }
 
 .about__right {
-    background-color:#f4f5f0; 
+    background-color:#f4f5f0;
 }
 
 .about__right-content {
-    align-self: flex-start; 
+    align-self: flex-start;
     @include ipad {
-        align-self: center; 
-    }   
+        align-self: center;
+    }
 }
 
 .user-description__image {
-    // width: 390px;
-    // height: 390px;
     margin-bottom: 35px;
 }
 
@@ -325,19 +316,21 @@ p {
     background-repeat: no-repeat;
     height: 80px;
     margin-bottom: 30px;
-    border-bottom: 3px solid $grey;
-    // &:after {
-    //     content: "";
-    //     display: block;
-    //     position: absolute;
-    //     border-bottom: 3px solid $grey;
-    //     width: 84px;
-    // }
+    // border-bottom: 3px solid $grey;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-image: url("../images/line.png");
+        width:90px;
+        height:  3px;
+    }
+
     @include ipad {
         font-size: 59px;
     }
 }
-  
+
 
 .block-subtitle {
     border-bottom: 3px solid $grey;
@@ -380,7 +373,7 @@ p {
     }
   }
 
-  
+
 .skills-row__list {
     display: flex;
     justify-content: flex-start;
@@ -389,7 +382,7 @@ p {
     }
 
   }
-  
+
   .text-block {
     font-size: 16px;
     font-family: "robotoregular";
@@ -401,19 +394,18 @@ p {
 
     }
   }
-  
+
   .skills__item {
     font-size: 14px;
     font-family: "robotomedium";
     color: rgb(78, 136, 57);
     line-height: 1.147;
     text-align: center;
-    display: inline-block; 
+    display: inline-block;
     position: absolute;
     top: 50%;
     left: 40%;
     transform: translateY(-50%) translateX(-50%);
-    // transform: translate(-50%, -50%);
   }
 
   .skills-list__item {
@@ -433,9 +425,6 @@ p {
     stroke-dasharray: 70.0010 282.6;
     transition: all 1s;
   }
-//   .circles:hover .circle-25 {
-//     stroke-dasharray: 70.65 282.6;
-//  }
 
  .skills__container {
     width: 110px;
@@ -485,9 +474,8 @@ p {
   }
 
   .footer__row {
-      display: flex;
-      flex-direction: row;
-    //   flex: 1;
+    display: flex;
+    flex-direction: row;
     padding: 20px 0;
     background-color: rgb(55, 62, 66);
     opacity: 0.851;
@@ -496,7 +484,7 @@ p {
     @include ipad {
         height: 235px;
         flex-wrap: wrap;
-        
+
     }
     @include phones {
         height: 290px;
@@ -504,7 +492,7 @@ p {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
-        padding: 0;       
+        padding: 0;
     }
   }
   .footer__text {
@@ -550,12 +538,11 @@ p {
         line-height: 24px;
     }
   }
-  
+
   .contacts-row__icon {
-     
   height: auto;
-    // margin-right:10px;
-  }
+ }
+
   .contacts-row__box {
       width: 25px;
       height: 25px;

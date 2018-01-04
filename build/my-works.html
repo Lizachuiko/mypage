@@ -62,12 +62,81 @@
             <div class="slide showing"><img class="slide__img" src="assets/images/work-1.png" alt=""></div>
           </div>
           <div class="slider__btns">
-            <button class="controls" id="previous">&lt;</button>
-            <button class="controls" id="next">&gt;</button>
+            <button class="controls button__prev" id="previous"></button>
+            <button class="controls button__ment" id="next"></button>
           </div>
         </div>
       </section>
-      <section class="section works__review"></section>
+      <section class="section works__review">
+        <div class="review__title block-title">Что обо мне говорят</div>
+        <div class="review__content block-review">
+          <div class="block-review__first">
+            <div class="block-review__avatar"><img class="block-review__pic" src="assets/images/review-face.png" alt=""></div>
+            <div class="block-review__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+            <div class="block-review__name">Ковальчук Дмитрий</div>
+            <div class="block-review__job">— основатель Loftschool</div>
+          </div>
+          <div class="block-review__second">
+            <div class="block-review__avatar"><img class="block-review__pic" src="assets/images/review-face.png" alt=""></div>
+            <div class="block-review__content">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+            <div class="block-review__name">Ковальчук Дмитрий</div>
+            <div class="block-review__job">— основатель Loftschool</div>
+          </div>
+        </div>
+        <div class="review__window-link window-link__box">
+          <div class="window-link__title block-subtitle">Связаться со мной</div>
+          <input class="window-link__name" name="name" id="name" type="text" placeholder="Имя">
+          <input class="window-link__mail" name="mail" id="mail" type="text" placeholder="Email">
+          <textarea class="window-link__message" name="message" id="message" placeholder="Ваше сообщение" rows="3"></textarea>
+          <div class="window-link__buttons">
+            <button class="window-link__send">Отправить</button>
+            <button class="window-link__reset">Очистить</button>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="footer__text">
+                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__menu">
+                <nav class="menu menu_full-screen">
+                  <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="">Мои работы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Обо мне</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Блог</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="footer__socials">
+                <ul class="socials">
+                  <div class="socials__container socials__footer">
+                    <svg class="icon" width="50" height="50">
+                      <use xlink:href="assets/images/sprite.svg#git"></use>
+                    </svg>
+                    <svg class="icon" width="50" height="50">
+                      <use xlink:href="assets/images/sprite.svg#in"></use>
+                    </svg>
+                    <svg class="icon" width="50" height="50">
+                      <use xlink:href="assets/images/sprite.svg#vk"></use>
+                    </svg>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__review"> 
+                <p>Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. </p><b>— Martin Golding </b>
+              </div>
+            </div>
+          </div>
+          <div class="footer__row-copyright">
+            <p>© Владимир Астахов | Создано с любовью в LoftSchool | 2016</p>
+          </div>
+        </footer>
+      </section>
     </div>
     <script src="assets/scripts/bundle.js" defer></script>
   </body>
