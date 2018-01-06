@@ -14,9 +14,9 @@
 //           map: map
 //         });
 //       }
-
 function initMap() {
     var idMap = document.getElementById('map');
+    if (!idMap) return;
     var image = 'assets/images/marker.png';
     var style = [
         {

@@ -7,10 +7,8 @@ block content
     .about__wrapper
         include ../common/header.pug
         section.section.about
-            
             .about__left
                 .about__triangle
-                    
                 .about__left-title
                     .block-title Обо мне
                 .about__left-coctent
@@ -30,11 +28,11 @@ block content
                 .about__right-content
                     ul.skills-list
                         each val, cat in { 'Frontend': ['HTML5', 'CSS3', 'JavaScript & jQuery'], 'Backend': ['PHP', 'Node.js & npm'], 'Workflow': ['Git', 'Gulp', 'Bower'] }
-                            li.skills-list__item 
-                                .skills-row 
+                            li.skills-list__item
+                                .skills-row
                                     .skills-row__title #{cat}
                                     ul.skills-row__list
-                                        each item in val 
+                                        each item in val
                                             li.skills__container
                                                 .skills__item #{item}
                                                 svg.circles(viewbox='0 0 110 110')
@@ -85,7 +83,7 @@ block content
             //-     .footer__row
             //-         .footer__col
             //-             .footer__text
-            //-                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+            //-                 p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
             //-         .footer__col
             //-             .footer__menu
             //-                 nav.menu.menu_full-screen
@@ -103,9 +101,9 @@ block content
             //-                         svg.icon(width='50', height='50')
             //-                             use(xlink:href='assets/images/sprite.svg#vk')
             //-         .footer__col
-            //-             .footer__review 
-            //-                 p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете. 
-            //-                 b — Martin Golding 
+            //-             .footer__review
+            //-                 p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+            //-                 b — Martin Golding
 
             //-     .footer__row-copyright
             //-         p © Владимир Астахов | Создано с любовью в LoftSchool | 2016

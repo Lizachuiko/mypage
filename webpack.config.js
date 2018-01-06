@@ -6,6 +6,23 @@ const config = {
     output: {
         filename: 'bundle.js'
     },
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
+                test: /\.(frag|vert)$/,
+                loader: 'webpack-glsl-loader'
+            }
+        ]
+    },
+    devtool:"source-map",
     plugins: [
         new UglifyJSPlugin({
             sourceMap: true
