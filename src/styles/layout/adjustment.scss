@@ -5,19 +5,16 @@ body {
     line-height: 24px;
     text-align: center;
     color: #566358;
-      height: 100%;
-    
-  
+    height: 100%;
     @include ipad {
       font-size: 15px;
-  
+
     }
     @include phones {
       font-size: 14px;
     }
   }
 
-  
 body {
   font-size: rem(16px);
   line-height: 1.42;
@@ -34,7 +31,6 @@ ul {
 
 li {
     list-style: none;
-    // display: inline-block;
   }
 
 a {

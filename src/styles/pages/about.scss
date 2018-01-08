@@ -21,7 +21,6 @@
 .hero {
     position: relative;
     grid-area: header;
-    // background-image: url("../images/header-bg.png");
     @include cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -50,7 +49,6 @@
     position: relative;
     @include ipad {
         flex-direction: column;
-        // text-align: center;
     }
 }
 
@@ -62,16 +60,6 @@
 	left: 0;
 }
 
-// .Background::after {
-// 	content: '';
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
-// }
-
 .map {
     grid-area: map;
     background: lightgreen;
@@ -81,9 +69,6 @@
 .footer {
     position: absolute;
     bottom: 0;
-    // grid-area: footer;
-    // height: 185px;
-
     color: white;
     font-family: 'robotolight';
     font-size: 16px;
@@ -334,17 +319,20 @@ p {
     background-size: 89px 3px;
     background-repeat: no-repeat;
     height: 80px;
+    position: relative;
+    margin: 0 auto;
     margin-bottom: 30px;
-    // border-bottom: 3px solid $grey;
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        background-image: url("../images/line.png");
-        width:90px;
-        height:  3px;
-    }
-
+    padding-bottom: 20px;
+    width: fit-content;
+    border-bottom: 3px solid $dark;
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     background-image: url("../images/line.png");
+    //     width:90px;
+    //     height:  3px;
+    // }
     @include ipad {
         font-size: 59px;
     }

@@ -1,3 +1,4 @@
+
 .slider__container {
     position: relative;
     width: 100%;
@@ -9,7 +10,12 @@
     justify-content: center;
     position: relative;
     height: 755px;
-    max-height: 100vh;
+    @include ipad {
+        height: 1025px;
+    }
+    @include phones {
+        height: 560px;
+    }
 }
 
 .slider__content {
@@ -19,7 +25,16 @@
     justify-content: center;
     align-items: center;
     height: 720px;
-    width: 80vh;
+    width: 80%;
+    @include ipad {
+    flex-direction: column;
+    height: 1025px;
+    justify-content: space-around;
+    }
+    @include phones {
+        height: 560px;
+        justify-content: center;
+    }
 }
 
 .slider__info {
@@ -28,6 +43,9 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+    @include ipad {
+        width: 100%;
+    }
 }
 
 .slide-info {
@@ -40,6 +58,9 @@
 
 .slider__display {
     width: 50%;
+    @include ipad {
+        width: 90%;
+    }
 }
 
 .slider__btn-prev,
@@ -51,10 +72,16 @@
 }
 .slider__btn-prev {
     left: 30px;
+    @include phones {
+        left: 10px;
+    }
 }
 
 .slider__btn-next {
     right: 30px;
+    @include phones {
+        right: 10px;
+    }
 }
 
 .button__prev,
@@ -73,10 +100,6 @@
     transform: rotate(180deg);
 }
 
-
-// .slide {
-//     width: 50%;
-// }
 
 .slide__img {
     display: block;

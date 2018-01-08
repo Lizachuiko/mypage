@@ -3,7 +3,7 @@
       @content;
     }
   }
-  
+
   @mixin phones {
     @media screen and (max-width: $phones) {
       @content;
