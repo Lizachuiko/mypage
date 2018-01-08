@@ -1,16 +1,22 @@
-.slider__content.slider__container
-    .slider__info
-        .slide-info.showing
-            .slide__title.block-subtitle Сайт школы онлайн образования
-            .slide__description HTML, CSS, JAVASCRIPT
-            .slide__button-show Посмотреть сайт
-        //- .slide-info
-        //- .slide-info
-    .slider__display
-        .slide.showing
-            img.slide__img(src="assets/images/work-1.png", alt="")
-        //- .slide
-        //- .slide
-    .slider__btns
-        button.controls.button__prev#previous
-        button.controls.button__ment#next
+.slider__container
+    .slider-box#slides
+        .slider__content.slide.showing
+            .slider__info
+                .slide-info
+                    .slide__title.block-subtitle Сайт школы онлайн образования
+                    .slide__description HTML, CSS, JAVASCRIPT
+                    .slide__button-show Посмотреть сайт
+            .slider__display
+                img.slide__img(src="assets/images/work-1.png", alt="")
+        .slider__content.slide
+            .slider__info
+                .slide-info
+                    .slide__title.block-subtitle Сайт магазина
+                    .slide__description HTML, CSS, JAVASCRIPT
+                    .slide__button-show Посмотреть сайт
+            .slider__display
+                img.slide__img(src="assets/images/work-2.png", alt="")
+    .slider__btn-prev
+        button#previous.controls.button__prev
+    .slider__btn-next
+        button#next.controls.button__next

@@ -11,13 +11,14 @@ block content
     //-     label(for="password") password
     //-     input(name="password" id="password")
     //-     button Войти
-    .welcome__container
+    .welcome__container.Background
+        canvas.Background-canvas
         button.log-in.welcome__btn(type='submit') Авторизироваться
         .welcome__box
             .welcome__maincontent
                 .user
                     .user__pic
-                            img.user__pic-img(src="assets/images/avatarme.png", alt="")
+                        img.user__pic-img(src="assets/images/avatarme.png", alt="")
                     .user__info
                         .user__name.asd Елизавета Чуйко
                         .user__data Личный сайт разработчика
@@ -58,7 +59,7 @@ block content
                         .form-quest Вы точно не робот?
                         .radio__container
                             .yes-box
-                                input.radio__form-yes(name="radio" id="radio-yes" type="radio") 
+                                input.radio__form-yes(name="radio" id="radio-yes" type="radio")
                                 label(for="radio-yes") Да
                             .no-box
                                 input.radio__form-no(name="radio" id="radio-no" type="radio")
@@ -70,6 +71,3 @@ block content
                         a.login__link(href="about.html") На главную
                     li.login__item
                         a.login__link(href="#") Войти
-               
-                    
-                

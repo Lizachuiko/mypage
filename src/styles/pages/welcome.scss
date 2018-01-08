@@ -5,14 +5,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-image: url("../images/header-bg.png");
+    // background-image: url("../images/header-bg.png");
     @include cover;
     justify-content: center;
     align-items: center;
 }
 
 .welcome__box {
-    margin: 0 5%;
+    position: absolute;
+    border-radius: 10px;
     // display: none;
 }
 

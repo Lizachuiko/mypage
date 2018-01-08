@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 
 const sass = require('gulp-sass');
+const stripCssComments = require('gulp-strip-css-comments');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
@@ -54,6 +55,7 @@ function styles() {
             outputStyle: 'compressed'
           }))
         .pipe(sourcemaps.write())
+        .pipe(stripCssComments())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(autoprefixer({
