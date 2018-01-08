@@ -26,12 +26,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
     grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
-      "socials socials socials . . . . . . . . hamburger"
+      "socials socials socials socials . . . . . . . hamburger"
       ". . . . person-info person-info person-info person-info . . . ."
       ". . . . . arrow arrow . . . . .";
     @include phones {
         grid-template-areas:
-        "socials socials  socials . . . . . hamburger hamburger"
+        "socials socials socials socials socials . . . hamburger hamburger"
         ".  person-info person-info person-info person-info person-info person-info person-info person-info ."
         ". . . . arrow arrow . . . .";
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -143,7 +143,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: center;
 }
 
 .icon {
@@ -336,6 +336,10 @@ p {
     @include ipad {
         font-size: 59px;
     }
+    @include ipad {
+        font-size: 35px;
+        line-height: 42px;
+    }
 }
 
 
@@ -355,6 +359,11 @@ p {
     width: fit-content;
     @include ipad {
         font-size: 30px;
+    }
+    @include ipad {
+        font-size: 21px;
+        line-height: 28px;
+        margin-bottom: 20px;
     }
 }
 

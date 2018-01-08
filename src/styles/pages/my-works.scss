@@ -56,6 +56,11 @@
 .block-review {
     display: flex;
     justify-content: center;
+    @include phones {
+        flex-direction: column;
+        width: 90%;
+        justify-content: space-around;
+    }
 }
 
 .block-review__first {
@@ -170,4 +175,8 @@ font-size: 16px;
 
 .review__content {
     margin-bottom: 50px;
+    width: 90%;
+    @include phones {
+        margin-bottom: 0px;
+    }
 }

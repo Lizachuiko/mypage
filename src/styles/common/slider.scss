@@ -33,7 +33,6 @@
     }
     @include phones {
         height: 560px;
-        justify-content: center;
     }
 }
 
@@ -113,7 +112,9 @@
     line-height: 1.2;
     text-align: center;
     margin-bottom: 60px;
-
+    @include phones {
+        margin-bottom: 15px;
+    }
 }
 
 .slide__button-show {
