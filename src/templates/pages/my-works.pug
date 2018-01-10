@@ -4,7 +4,19 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    .works__wrapper
+    .works__wrapper#works__wrapper
+        .full-menu__container
+            //- a#cross.cross-link(href='#')
+                //- img.full-menu__cross(src='assets/images/cross.png', alt='')
+            .full-menu__nav
+                .full-menu__item
+                    a.nav__link(href='#', data-scroll-to='1') Мои работы
+                .full-menu__item
+                    a.nav__link(href='#', data-scroll-to='2') Блог
+                .full-menu__item
+                    a.nav__link(href='#', data-scroll-to='3') Обо мне
+                .full-menu__item
+                    a.nav__link(href='#', data-scroll-to='4') Авторизация
         include ../common/header.pug
         section.section.works__slider
             .slider__title.block-title Мои работы

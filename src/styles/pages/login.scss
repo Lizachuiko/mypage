@@ -4,9 +4,10 @@
 
 .login {
     display: flex;
-    display: none;
+    // display: none;
     flex-direction: column;
     position: absolute;
+    transform: rotateY(180deg);
 }
 
 .login__container {

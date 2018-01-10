@@ -147,14 +147,36 @@ window.onscroll = function () {
 
 
 
-var hero = document.getElementById('about__wrapper')
-var hamburger = document.getElementById('hamburger')
-var cross = document.getElementById('cross')
+// var aboutWrapper = document.getElementById('about__wrapper')
+// var hamburger = document.getElementById('hamburger')
+// // var cross = document.getElementById('cross')
 
-hamburger.addEventListener('click', function() {
-    hero.classList.add('full-menu')
-});
+// hamburger.addEventListener('click', function() {
+//     aboutWrapper.classList.add('full-menu')
+// });
 
-cross.addEventListener('click', function() {
-  hero.classList.remove('full-menu')
-});
+// hamburger.addEventListener('click', function() {
+//     aboutWrapper.classList.remove('full-menu')
+// });
+
+// $(document).ready(function(){
+//     $(".hamburger").click(function(){
+//       $(this).toggleClass("full-menu");
+//     });
+//   });
+
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+      $(this).toggleClass("is-active");
+      $(".about__wrapper").toggleClass("full-menu");
+      $(".works__wrapper").toggleClass("full-menu");
+    });
+    $(".log-in").click(function(){
+      $('.flip__container').addClass('hover');
+    });
+    $(".Background-canvas").click(function(){
+      $('.flip__container').removeClass('hover');
+    });
+  });
+
+
