@@ -100,7 +100,9 @@ function getDPI(){
     return 1;
   }
 }
+
 window.addEventListener('resize',updateSize);
+
 function updateSize(){
   let container=document.querySelector(divSelector);
   let dimensions=container.getBoundingClientRect();
@@ -111,4 +113,7 @@ function updateSize(){
   haze.gl.createUniform('1f','dpi',haze.dpi);
   haze.gl.createUniform('2f','resolution',haze.width*haze.dpi,haze.height*haze.dpi);
 }
+
 updateSize();
+
+export { updateSize }

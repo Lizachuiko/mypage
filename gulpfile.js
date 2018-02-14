@@ -64,14 +64,6 @@ function styles() {
         }))
 }
 
-// gulp.task('sprite', function () {
-//     var spriteData = gulp.src('images/*.png').pipe(spritesmith({
-//       imgName: 'sprite.png',
-//       cssName: 'sprite.css'
-//     }));
-//     return spriteData.pipe(gulp.dest('path/to/output/'));
-//   });
-
 
 // очистка
 function clean() {

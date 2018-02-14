@@ -32,12 +32,13 @@
     height: 100%;
     min-height: rem(650px);
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     // background-image: url("../images/header-bg.png");
     @include cover;
     justify-content: center;
     align-items: center;
+    z-index: 5000;
 }
 
 .welcome__box {
